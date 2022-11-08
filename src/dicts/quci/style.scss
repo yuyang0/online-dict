@@ -1,0 +1,188 @@
+.dictQuci-Title {
+  font-size: 1.5em;
+}
+
+.dictQuci-Phsym {
+  display: flex;
+  margin-bottom: 5px !important;
+  margin-left: 0px !important;
+}
+
+.dictQuci-PhsymItem {
+  margin-right: 1em;
+}
+
+.dictQuci-Cdef {
+  margin-bottom: 5px !important;
+  margin-left: 0px !important;
+}
+
+.dictQuci-CdefItem {
+  display: table;
+}
+
+.dictQuci-CdefItem_Pos {
+  display: table-cell;
+  width: 3em;
+  font-weight: bold;
+  text-align: right;
+}
+
+.dictQuci-CdefItem_Def {
+  display: table-cell;
+  padding: 0 12px;
+}
+
+.dictQuci-Container {
+  // font-size: 1.5em;
+  border-top: 1px solid #ccc !important;
+}
+
+.dictQuci-Container .dictQuci-mneList {
+  // width: 200px;
+  // margin-left seems not work on ipad and android, use padding-left instead.
+  // margin-left: 5px;
+  padding-left: 7px;
+  margin-bottom: 10px;
+}
+
+.dictQuci-Container .dictQuci-mneItem {
+  display: flex;
+}
+
+.dictQuci-Container .dictQuci-mneItem span {
+  font-weight: bold;
+  display: block;
+}
+
+.dictQuci-Container .dictQuci-mneItem div {
+  margin-left: 5px;
+  // flex-basis: 5%;
+  // margin-top: 20px;
+  // display: inline-block;
+  // float: left;
+}
+
+.dictQuci-Container dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.dictQuci-subTitle {
+  font-size: 0.8em !important;
+  color: #e84427 !important;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.dictQuci-Container .zhOriginTitle {
+  color: #C7254E;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.dictQuci-Container #yd-etym {
+  background-color: #fffbec;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  font-family: Georgia, Garamond, Times New Roman, Times, serif;
+  font-size: 12pt;
+  padding: 6px;
+}
+
+.dictQuci-Container #yd-etym .highlight {
+  background-color: #ddd9ca;
+}
+
+.dictQuci-Container .thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+
+.dictQuci-Container #yd-etym .foreign {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.dictQuci-Container #yd-etym dt {
+  color: #800020;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dictQuci-Container #yd-etym dd,
+.dictQuci-Container #yd-etym dt {
+  background-color: #fffbec;
+  margin-left: 0;
+  padding: 0.1em 0.5em 0;
+}
+
+.dictQuci-Inf {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.dictQuci-InfItem {
+  margin-right: 1em;
+}
+
+.dictQuci-SentenceList {
+  padding: 0 0 0 1.5em;
+}
+
+.dictQuci-SentenceItem {
+  margin-bottom: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.dictQuci-SentenceItem_HL {
+  color: var(--color-theme);
+}
+
+.dictQuci-SentenceSource {
+  color: #999;
+}
+
+.dictQuci-Related_Title {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.dictQuci-Related_DefTitle {
+  font-size: 1.2em;
+  margin: 5px 0 0 0;
+}
+
+.dictQuci-Related_Meaning {
+  display: table;
+  margin-bottom: 2px;
+}
+
+.dictQuci-Related_Meaning_Word {
+  display: table-cell;
+  width: 8em;
+  text-align: right;
+  color: #16a085;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dictQuci-Related_Meaning_Def {
+  display: table-cell;
+  padding: 0 12px;
+}

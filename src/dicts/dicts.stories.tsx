@@ -25,6 +25,8 @@ import { DictMacmillan } from './base/macmillan/View'
 import { MacmillanUkPlugin } from './macmillan_uk'
 import { WebsterlearnerPlugin } from './websterlearner'
 import { DictWebsterLearner } from './websterlearner/View'
+import { QuciPlugin } from './quci'
+import { DictQuci } from './quci/View'
 
 addons.setConfig({
     isFullscreen: true,
@@ -38,17 +40,17 @@ addons.setConfig({
     selectedPanel: undefined,
     initialActive: 'sidebar',
     sidebar: {
-      showRoots: false,
-      collapsedRoots: ['other'],
+        showRoots: false,
+        collapsedRoots: ['other'],
     },
     toolbar: {
-      title: { hidden: false, },
-      zoom: { hidden: false, },
-      eject: { hidden: false, },
-      copy: { hidden: false, },
-      fullscreen: { hidden: false, },
+        title: { hidden: false, },
+        zoom: { hidden: false, },
+        eject: { hidden: false, },
+        copy: { hidden: false, },
+        fullscreen: { hidden: false, },
     },
-  });
+});
 
 class StoryItem {
     plugin: IPlugin
@@ -66,6 +68,7 @@ export const TranslateTemplate: FC<ViewPorps<string>> = ({ result }) => {
 
 const allDictPlugins = {
     bing: new StoryItem(new BingPlugin, DictBing),
+    quci: new StoryItem(new QuciPlugin, DictQuci),
     cambridge_en2en: new StoryItem(new CambridgeEn2EnPlugin, DictCambridge),
     cambridge_en2zh: new StoryItem(new CambridgeEn2ZhPlugin, DictCambridge),
     cobuild: new StoryItem(new CobuildPlugin, DictCobuild),
@@ -118,35 +121,35 @@ generateAllParseResult().then(resultPlugins => {
             const theme = text('theme', 'sepia')
             return (
                 <body className={theme}>
-                <div id="sb-theme-content" className={theme}>
-                    <div id="dic_banner" className="dic_banner ios_statusbar">
-                        <div id="leftBtn">
-                            <div className="backArrow"></div><span id="headWord" className="dicHeadWord"></span>
-                        </div>
+                    <div id="sb-theme-content" className={theme}>
+                        <div id="dic_banner" className="dic_banner ios_statusbar">
+                            <div id="leftBtn">
+                                <div className="backArrow"></div><span id="headWord" className="dicHeadWord"></span>
+                            </div>
 
-                        <div id="right">
-                            <div className="eudic_addword_box" id="eudic_addword_box">
-                                <i id="eudic_addword_button" className="eudic_addword_icon_0"></i>
-                            </div>
-                        </div>
-                        <div id="wordInfoHead">
-                        </div>
-                    </div>
-                    <div id="expBody" className="expBody">
-                        <div id="olnid1">
-                            <div id="@DicID" className="explain_wrap" style={{ width: '100%' }}>
-                                <div className="expHead">
-                                    <button>第三方词典标题</button>
-                                    <span className="arrow arrSideDown"></span>
-                                    <span className="arrow arrDown"></span>
-                                </div>
-                                <div id="@DicIDchild" className="expDiv">
-                                    {story()}
+                            <div id="right">
+                                <div className="eudic_addword_box" id="eudic_addword_box">
+                                    <i id="eudic_addword_button" className="eudic_addword_icon_0"></i>
                                 </div>
                             </div>
+                            <div id="wordInfoHead">
+                            </div>
+                        </div>
+                        <div id="expBody" className="expBody">
+                            <div id="olnid1">
+                                <div id="@DicID" className="explain_wrap" style={{ width: '100%' }}>
+                                    <div className="expHead">
+                                        <button>第三方词典标题</button>
+                                        <span className="arrow arrSideDown"></span>
+                                        <span className="arrow arrDown"></span>
+                                    </div>
+                                    <div id="@DicIDchild" className="expDiv">
+                                        {story()}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </body>
             )
         })

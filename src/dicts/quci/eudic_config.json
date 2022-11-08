@@ -1,0 +1,12 @@
+{
+    "manifest_version": 1,
+    "name": "趣词词典",
+    "desc": "趣词词典",
+    "module": {
+        "name": "QuciPlugin"
+    },
+    "version": 20211028,
+    "author": "quword.com",
+    "libid": 20688,
+    "enabled": true
+}
