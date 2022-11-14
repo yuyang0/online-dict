@@ -1,7 +1,7 @@
 import { QuciPlugin, QuciResult, QuciResultLex } from '../../../src/dicts/quci/index'
 import { DictSearchResult } from '../../../src/dicts/helpers'
 
-describe('Bing', () => {
+describe('Quci', () => {
     it('should parse lex result correctly', () => {
         const word = 'indulge'
         const plugin = new QuciPlugin()
