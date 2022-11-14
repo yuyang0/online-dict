@@ -134,9 +134,9 @@ function handleLexResult(
         }
     }
     if (mnemonicElement) {
-        let parts = mnemonicElement.textContent.split("\n");
+        let parts = mnemonicElement.textContent.split("\n").filter(ss => ss.trim() !== "");
         searchResult.result.mnemonic = parts.map((item) => {
-            return item.replace(/^[0-9]+\./, "").trim()
+            return item.trim().replace(/^[0-9]+\./, "").trim()
         })
     }
 
